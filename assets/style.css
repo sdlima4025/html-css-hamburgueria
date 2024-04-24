@@ -6,11 +6,10 @@
     list-style: none;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    /* font-size: 62.5%; */
 }
 body {
     font-family: 'Inter';
-    font-size: 1.8rem;
+    font-size: 18px;
     background-color: #141414;
     color: #FFF;
 }
@@ -91,6 +90,89 @@ header .menu-icon div {
     background-color: #FFF;
 }
 
+/* HERO */
+.hero .container {
+    display: flex;
+}
+.hero .leftside, 
+.hero .rightside {
+    flex: 1;
+}
+
+.hero .leftside {
+    padding-bottom: 150px;
+}
+.hero .rightside {
+    text-align: center;
+}
+.hero .rightside img {
+    width: auto;
+    height: 600px;
+    padding: 20px 80px;
+}
+.hero h1 {
+    font-family: 'Calistoga';
+    font-size: 72px;
+    line-height: 74px;
+    margin-top: 50px;
+}
+.hero p {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 40px 0;
+}
+.hero .button {
+    display: inline-block;
+    background-color: #FE6A0F;
+    font-weight: 500;
+    color: #FFF;
+    padding: 15px 80px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.hero .button:hover {
+    opacity: 0.8;
+}
+.search {
+    background-color: #1F1F1F;
+    padding: 80px 0;
+    margin-top: -100px;
+}
+.search .title {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.search .sides {
+    display: flex;
+    margin-top: 20px;
+    gap: 100px;
+}
+.search .leftside, 
+.search .rightside {
+    flex: 1;
+}
+.search input,
+.search select {
+    width: 100%;
+    background-color: #2B2B2B;
+    color: #FFF;
+    font-size: 24px;
+    outline: none;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+}
+.search input {
+    background-image: url(./searchIcon.png);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    padding-left: 60px;
+}
+.search select {
+    border-right: 20px solid transparent;
+}
+
 
 @media (max-width: 820px ) {
     header nav {
@@ -98,5 +180,45 @@ header .menu-icon div {
     }
     header .menu {
         display: flex;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .leftsid  {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .hero .rightside {
+        padding-bottom: 50px;
+    }
+
+    .hero .rightside img {
+        height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+        line-height: 50px;
+    }
+    .hero p {
+        font-size: 20px;
+        line-height: 26px;
+        margin: 40px 0;
+    }
+    .search {
+        padding-bottom: 30px;
+    }
+
+    .search .title {
+        text-align: center;
+    }
+
+    .search .sides {
+        flex-direction: column;
+        gap: 20px;
     }
 }
